@@ -5,22 +5,22 @@
 ## Vogelperspektive: 
 
 * Überblick aus Providersicht: Von der Physik bis zum orchestrierten Container: Grundlegende Orientierung der iNNOVO Cloud Plattformen
-	* Hypervisor 
-	* Availability Zones
-	* OpenStack
-	* Kubernetes
+  * Hypervisor 
+  * Availability Zones
+  * OpenStack
+  * Kubernetes
 
 * Einführung aus Kundenperspektive
-	* Was sind die Vorteile und Anwendungsszenarien, wenn Kubernetes in einer mandantenfähigen Cloud-Plattform liegt?
-	* Bedeutung SoftwareDefinedNetworking
-	* Bedeutung SoftwareDefinedStorage
-	* Geführte Tour Cloud-Dashboard
-	* Geführte Tour Kubernetes-Dashboard
+  * Was sind die Vorteile und Anwendungsszenarien, wenn Kubernetes in einer mandantenfähigen Cloud-Plattform liegt?
+  * Bedeutung SoftwareDefinedNetworking
+  * Bedeutung SoftwareDefinedStorage
+  * Geführte Tour Cloud-Dashboard
+  * Geführte Tour Kubernetes-Dashboard
 
 ## Praktischer Einstieg
 * Kickstart: 
-	* Einrichten der Arbeitsumgebung
-	* Erstes Pod-basiertes Deployment in Kubernetes
+  * Einrichten der Arbeitsumgebung
+  * Erstes Pod-basiertes Deployment in Kubernetes
   * Aufbau der deklarativen YAML-Dateien
     * specs
     * metadata
@@ -35,10 +35,10 @@
 
 * ### Deep-Dive:
   * #### Deployments
-	  * Replica Sets
+    * Replica Sets
     * Pods
     * Container
-	  * Deployment kontrollieren: Rollout- und Rollback
+    * Deployment kontrollieren: Rollout- und Rollback
   * #### Kubernetes Services
     * Dynamic backend handling
       * livenessProbe
@@ -50,19 +50,19 @@
       * NodePorts
       * ClusterIP
       * Loadbalancer
-	* #### Persistent Volume Storage
+  * #### Persistent Volume Storage
     * Persistent Volumes
     * Persisten Volume Claims
-	* #### Multi-Container Pods
+  * #### Multi-Container Pods
     * Init Container
     * Sidecar Container
   * #### information injection into containers
     * configmaps
     * secrets
-	* #### Stateful Sets
-	* #### Architektur-Analyse und Überlegungen am praktischen Beispiel des Kunden.
+  * #### Stateful Sets
+  * #### Architektur-Analyse und Überlegungen am praktischen Beispiel des Kunden.
 
 ## Hands-On
 * Analyse, Planung und Aufbau der Kunden-Applikation
-	
+  
 
