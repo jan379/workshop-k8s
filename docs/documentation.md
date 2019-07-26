@@ -28,7 +28,6 @@ With that you can
 - see resource consumption from the managed kubernetes environment inside your public cloud project.
 - seamless integrate both worlds (network wise, storrage wise).
 
-Conclusion: Whatever payload you built in kubernetes, you can see it in our puublic cloud web interface. No magic at all, pure transparency :)
 =========================
 
 Steps to follow when logged in into https://imke.cloud
@@ -38,7 +37,7 @@ Steps to follow when logged in into https://imke.cloud
 2. create a cluster
 3. create a node deployment
 4. download your environment file to work with
-5. populate your envoronment file so that kubectl knows every important aspect.
+5. populate your environment file so that kubectl knows every important aspect.
 6. Create your first deployment.
 
 Your done :)
