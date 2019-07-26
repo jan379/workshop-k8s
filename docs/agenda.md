@@ -35,10 +35,10 @@
 
 * ### Deep-Dive:
   * #### Deployments
-	  * (Replica Controller)
 	  * Replica Sets
     * Pods
     * Container
+	  * Deployment kontrollieren: Rollout- und Rollback
   * #### Kubernetes Services
     * Dynamic backend handling
       * livenessProbe
@@ -50,17 +50,19 @@
       * NodePorts
       * ClusterIP
       * Loadbalancer
-	* Persistent Volume Storage
+	* #### Persistent Volume Storage
     * Persistent Volumes
     * Persisten Volume Claims
-	* Multi-Container Umgebungen
+	* #### Multi-Container Pods
     * Init Container
     * Sidecar Container
-	* Stateful Sets
-	* Deployment kontrollieren: Rollout- und Rollback
-	* Architektur-Analyse und Überlegungen am praktischen Beispiel des Kunden.
+  * #### information injection into containers
+    * configmaps
+    * secrets
+	* #### Stateful Sets
+	* #### Architektur-Analyse und Überlegungen am praktischen Beispiel des Kunden.
 
 ## Hands-On
-* Planung und Aufbau der Kunden-Applikation
+* Analyse, Planung und Aufbau der Kunden-Applikation
 	
 
