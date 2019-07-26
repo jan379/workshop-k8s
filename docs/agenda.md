@@ -35,7 +35,7 @@
 
 * Deep-Dive:
   * Deployments
-	  (* Replica Controller)
+	  * (Replica Controller)
 	  * Replica Sets
     * Pods
     * Container
