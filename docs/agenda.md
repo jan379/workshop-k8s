@@ -33,20 +33,20 @@
 
 ## Tiefer gehende Theorie
 
-* Deep-Dive:
-  * Deployments
+* ### Deep-Dive:
+  * #### Deployments
 	  * (Replica Controller)
 	  * Replica Sets
     * Pods
     * Container
-	* Kubernetes Services
-    * #### Dynamic backend handling
+  * #### Kubernetes Services
+    * Dynamic backend handling
       * livenessProbe
       * readinessProbe
-    * #### Choose your backend:
+    * Choose your backend:
       * Using Selectors
       * Without selector
-    * #### Choose your type:
+    * Choose your type:
       * NodePorts
       * ClusterIP
       * Loadbalancer
