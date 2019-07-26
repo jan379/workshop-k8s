@@ -40,9 +40,16 @@
     * Pods
     * Container
 	* Kubernetes Services
-    * Node Ports
-    * Host Ports
-    * Loadbalancer
+    * #### Dynamic backend handling
+      * livenessProbe
+      * readinessProbe
+    * #### Choose your backend:
+      * Using Selectors
+      * Without selector
+    * #### Choose your type:
+      * NodePorts
+      * ClusterIP
+      * Loadbalancer
 	* Persistent Volume Storage
     * Persistent Volumes
     * Persisten Volume Claims
@@ -51,8 +58,6 @@
     * Sidecar Container
 	* Stateful Sets
 	* Deployment kontrollieren: Rollout- und Rollback
-  * liveness checks
-  * health checks
 	* Architektur-Analyse und Überlegungen am praktischen Beispiel des Kunden.
 
 ## Hands-On

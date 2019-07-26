@@ -2,22 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    run: nginx
-  name: fodb-v1
+    app: gateway
+  name: gateway-v1
 spec:
   replicas: 2
   selector:
     matchLabels:
-      run: nginx
+      app: gateway
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        run: nginx
+        app: gateway
     spec:
       containers:
-      - image: nginx:alpine
+      - image: nginx
         name: nginx
         ports:
         - containerPort: 80
