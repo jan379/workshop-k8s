@@ -1,5 +1,4 @@
 # workshop-k8s
-
-Inside this repository you will find documentation and code to get basic steps done in the iNNOVO Managed Kubernetes Engine.
+Within this repository you will find documentation and code to get basic steps done using the iNNOVO Managed Kubernetes Engine.
 
 
