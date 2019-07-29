@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     run: nginx
-  name: fodb-v1
+  name: customerdeployment-v1
 spec:
   replicas: 2
   selector:
