@@ -18,6 +18,18 @@ spec:
       containers:
       - image: nginx
         name: nginx
+        volumeMounts:
+        - mountPath: /var/www/html # place index.html
+          readOnly: true
+          name: index-html
         ports:
         - containerPort: 80
         resources: {}
+      volumes:
+      - name: index-html
+        configMap:
+          name: index-html # place ConfigMap `nginx-conf` on /etc/nginx
+          items:
+            - key: index.html 
+              path: index.html
+              
