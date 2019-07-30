@@ -17,8 +17,8 @@ spec:
         run: nginx
     spec:
       containers:
-      - image: nginx:alpine
+      - image: nginx
         name: nginx
         ports:
-        - containerPort: 6379
+        - containerPort: 80
         resources: {}
