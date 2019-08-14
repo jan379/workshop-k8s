@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: httpd
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: httpd
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        run: httpd
+        provides: backend 
+    spec:
+      containers:
+      - image: httpd
+        name: httpd
+        ports:
+        - containerPort: 80
+        resources: {}
