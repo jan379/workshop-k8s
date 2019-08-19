@@ -37,3 +37,5 @@ find out allowed keys, values and types (list, map, string, boolean, Object)
 ``` kubectl run -i -t busybox --image=busybox --restart=Never ``` 
 
 
+### switch namespaces
+kubectl config set-context --current --namespace=ingress-nginx
