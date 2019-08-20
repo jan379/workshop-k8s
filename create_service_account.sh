@@ -1,4 +1,4 @@
-# /bin/bash
+#!/bin/bash
 
 # Run this from the directory you want the user to be generated with the $KUBECONFIG rights of
 # an account that is powerful enough to create new service accounts
@@ -38,20 +38,20 @@ cat <<EOF > ${USER}.config
 apiVersion: v1
 clusters:
 - cluster:
-    certificate-authority-data: ${kubectl config view --raw -o json | jq -r '.clusters[0].cluster."certificate-authority-data"'}
-    server: ${kubectl config view --raw -o json | jq -r '.clusters[0].cluster.server'}
-  name: ${kubectl config view --raw -o json | jq -r '.clusters[0].name'}
+    certificate-authority-data: $(kubectl config view --raw -o json | jq -r '.clusters[0].cluster."certificate-authority-data"')
+    server: $(kubectl config view --raw -o json | jq -r '.clusters[0].cluster.server')
+  name: $(kubectl config view --raw -o json | jq -r '.clusters[0].name')
 contexts:
 - context:
-    cluster: ${kubectl config view --raw -o json | jq -r '.contexts[0].cluster'}
+    cluster: $(kubectl config view --raw -o json | jq -r '.contexts[0].context.cluster')
     user: ${USER}
-  name: ${kubectl config view -o json | jq -r '."current-context"'}
-current-context: ${kubectl config view -o json | jq -r '."current-context"'}
+  name: $(kubectl config view -o json | jq -r '."current-context"')
+current-context: $(kubectl config view -o json | jq -r '."current-context"')
 kind: Config
 preferences: {}
 users:
 - name: ${USER}
   user:
-    client-certificate-data: ${cat ${USER}.crt | base64}
-    client-key-data: ${cat ${USER}.key | base64}
+    client-certificate-data: $(cat ${USER}.crt | base64)
+    client-key-data: $(cat ${USER}.key | base64)
 EOF
