@@ -22,7 +22,7 @@ Orientiert euch dafür an den Beispielen in ../code/buildingblocks/01_services/
 Geht davon aus, dass eine Applikation im geschützten privaten Netz abrufbar sein soll.
 
 Übermittelt dem Operations-Team die Parameter (IP-Adresse(n) / Port(s), die notwendig sind um mit der Applikation 
-zu konsumieren.
+zu kommunizieren.
 
 Überprüft gemeinsam mit beiden Teams, ob der Dienst im privaten Netz erreichbar ist und debugged ggf. gemeinsam,
 warum das nicht der Fall ist.
