@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: datacontainer
+spec:
+  serviceName: "datacontainer"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: datacontainer
+  template:
+    metadata:
+      labels:
+        app: datacontainer
+    spec:
+      containers:
+      - name: datacontainer
+        image: debian
+        volumeMounts:
+        - name: storage
+          mountPath: /mnt
+  volumeClaimTemplates:
+  - metadata:
+      name: storage
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 10Gi
