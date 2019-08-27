@@ -34,8 +34,9 @@ find out allowed keys, values and types (list, map, string, boolean, Object)
 
 ### inspect something in your environment, start a container for that:
 
-``` kubectl run -i -t busybox --image=busybox --restart=Never ``` 
+``` kubectl run --generator=run-pod/v1 -i --tty inspector --image=busybox -- sh ``` 
 
+You can change the image (for example to "debian" to get a more complete linux userland.
 
 ### switch namespaces
 kubectl config set-context --current --namespace=ingress-nginx
