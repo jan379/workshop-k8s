@@ -8,4 +8,6 @@ After starting a proxy using ``` kubectl proxy ``` you are able to open the dash
 
 To access the dashboard you can authorize yourself by uploading a kubeconfig file.
 
+If your kubectl installation is on a remote location you can build a tunne via SSH to that localtion:
 
+ssh -A innovo@<remoteWorkstationIP> -L 8001:127.0.0.1:8001
