@@ -40,3 +40,4 @@ You can change the image (for example to "debian" to get a more complete linux u
 
 ### switch namespaces
 kubectl config set-context --current --namespace=ingress-nginx
+
