@@ -4,5 +4,17 @@ metadata:
   name: index-html
 data:
   index.html: |
-   hallo welt
-   Wir sitzen in einem Workshop
+        <html>
+        <head>
+        <meta charset="UTF-8">
+        <title>a pretty new site</title>
+        <meta name="description" content="here will be something soon.">
+        </head>
+        <body>
+        <div>
+          <br>
+          Workshop sample website
+          <br>
+        </div>
+        </body>
+        </html>
