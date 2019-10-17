@@ -4,6 +4,7 @@ metadata:
   name: index-html
 data:
   index.html: |
+        <!DOCTYPE html>
         <html>
         <head>
         <meta charset="UTF-8">
@@ -11,10 +12,10 @@ data:
         <meta name="description" content="here will be something soon.">
         </head>
         <body>
-        <div>
+        <header>
           <br>
-          Workshop sample website
+          <h3>Workshop sample website</h3>
           <br>
-        </div>
+        <header>
         </body>
         </html>
