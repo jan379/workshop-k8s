@@ -19,7 +19,7 @@ spec:
       - image: nginx
         name: nginx
         volumeMounts:
-        - mountPath: /var/www/html # place index.html
+        - mountPath: /usr/share/nginx/html # place index.html
           readOnly: true
           name: index-html
         ports:
@@ -28,7 +28,7 @@ spec:
       volumes:
       - name: index-html
         configMap:
-          name: index-html # place ConfigMap `nginx-conf` on /etc/nginx
+          name: index-html 
           items:
             - key: index.html 
               path: index.html
