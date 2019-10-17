@@ -2,26 +2,26 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: frontend-deployment
-  name: frontend-v1
+    app: backend-deployment
+  name: backend-v1
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: frontend
+      app: backend
   strategy: {}
   template:
     metadata:
       labels:
-        app: frontend
+        app: backend
     spec:
       containers:
       - image: nginx
         name: nginx
         volumeMounts:
-        - mountPath: /usr/share/nginx/html # place index.html
+        - mountPath: /usr/share/nginx/html # place index.php
           readOnly: true
-          name: index-html
+          name: index.php
         ports:
         - containerPort: 80
         resources: {}
@@ -42,10 +42,10 @@ spec:
               name: database-secrets
               key: dbname
       volumes:
-      - name: index-html
+      - name: index.php
         configMap:
-          name: index-html 
+          name: index.php 
           items:
-            - key: index.html 
-              path: index.html
+            - key: index.php 
+              path: index.php
               
