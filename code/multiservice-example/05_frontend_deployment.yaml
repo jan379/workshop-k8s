@@ -16,36 +16,20 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: nginx
-        name: nginx
+      - image: jan379/apache:latest
+        name: frontendcontainer
         volumeMounts:
-        - mountPath: /usr/share/nginx/html # place index.html
+        - mountPath: /usr/share/nginx/html # place index.php
           readOnly: true
-          name: index-html
+          name: index-php
         ports:
         - containerPort: 80
         resources: {}
-        env:
-        - name: MYSQL_USER
-          valueFrom:
-            secretKeyRef:
-              name: database-secrets
-              key: username
-        - name: MYSQL_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: database-secrets
-              key: password
-        - name: MYSQL_DATABASE
-          valueFrom:
-            secretKeyRef:
-              name: database-secrets
-              key: dbname
       volumes:
-      - name: index-html
+      - name: index-php
         configMap:
-          name: index-html 
+          name: index-php 
           items:
-            - key: index.html 
-              path: index.html
+            - key: index.php 
+              path: index.php
               

@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: index-php
+data:
+  index.php: |
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta charset="UTF-8">
+        <title>a pretty new site</title>
+        <meta name="description" content="here will be something soon.">
+        </head>
+        <body>
+        <header>
+          <br>
+          <h3>Workshop sample website</h3>
+          <br>
+          <h4>Attempting MySQL connection from php...</h4>
+          <br>
+        <header>
+        <?php
+        $host = getenv('MYSQL_SERVICE_HOST');
+        $user = getenv('MYSQL_USER');
+        $pass = getenv('MYSQL_PASSWORD');
+        $conn = new mysqli($host, $user, $pass);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        } else {
+            echo "Connected to MySQL successfully!";
+        }
+
+        ?> 
+        </body>
+        </html>
