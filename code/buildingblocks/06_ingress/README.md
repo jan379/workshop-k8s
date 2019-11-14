@@ -22,19 +22,25 @@ You can then use these secret data (see ingress_tls.yaml as an example).
 ### Using a dummy certificate
 
 #### set some names
-KEY_FILE=dummycert.key
-CERT_FILE=dummycert.crt
-HOST=dummydomain.de
-CERT_NAME=dummycert
+```
+export KEY_FILE=dummycert.key
+export CERT_FILE=dummycert.crt
+export HOST=dummydomain.de
+export CERT_NAME=dummycert
+```
 
 #### generate a dummy cert
 
 < **_NOTE_** This step can be skipped if there is already a certificate available
 
+```
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${KEY_FILE} -out ${CERT_FILE} -subj "/CN=${HOST}/O=${HOST}"
+```
 
 #### make it available as a secret
+```
 kubectl create secret tls ${CERT_NAME} --key ${KEY_FILE} --cert ${CERT_FILE}
+```
 
 # This secret can now be consumed in ingress that provide tls termination
 
