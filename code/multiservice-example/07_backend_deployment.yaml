@@ -16,14 +16,14 @@ spec:
         app: backend
     spec:
       containers:
-      - image: nginx
-        name: nginx
+      - image: jan379/php:latest
+        name: backendcontainer
         volumeMounts:
         - mountPath: /usr/share/nginx/html # place index.php
           readOnly: true
-          name: index.php
+          name: index-php
         ports:
-        - containerPort: 80
+        - containerPort: 9000
         resources: {}
         env:
         - name: MYSQL_USER
@@ -42,9 +42,9 @@ spec:
               name: database-secrets
               key: dbname
       volumes:
-      - name: index.php
+      - name: index-php
         configMap:
-          name: index.php 
+          name: index-php 
           items:
             - key: index.php 
               path: index.php
