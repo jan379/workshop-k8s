@@ -25,14 +25,13 @@
 ## Tiefer gehende Theorie
 
 * Deep-Dive:
-	* Replica Controller
+	* Deployments
 	* Replica Sets
+	* Stateful Sets
 	* Kubernetes Services
 	* Persistent Volume Storage
 	* Multi-Container Umgebungen
-	* Stateful Sets
 	* Deployment kontrollieren: Rollout- und Rollback
-	* Architektur-Analyse und Überlegungen am praktischen Beispiel des Kunden.
 
 ## Hands-On
 * Planung und POC der Kunden-Applikation
