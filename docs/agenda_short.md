@@ -35,6 +35,6 @@
 	* Architektur-Analyse und Überlegungen am praktischen Beispiel des Kunden.
 
 ## Hands-On
-* Planung und Aufbau der Kunden-Applikation
+* Planung und POC der Kunden-Applikation
 	
 
