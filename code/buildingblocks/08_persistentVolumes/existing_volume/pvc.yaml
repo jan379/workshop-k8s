@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/cinder
+  name: debugclaim
+  namespace: default
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: standard 
+  volumeMode: Filesystem
+  volumeName: debugvolume 
+status:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 10Gi

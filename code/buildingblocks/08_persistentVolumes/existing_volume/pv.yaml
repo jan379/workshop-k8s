@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: debugvolume
+  namespace: default
+  labels:
+    type: local
+spec:
+  storageClassName: standard 
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  cinder:
+    volumeID: 3cae137f-476b-4129-9196-0052ca60be21 

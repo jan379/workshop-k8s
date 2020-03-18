@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{"volume.beta.kubernetes.io/storage-provisioner":"kubernetes.io/cinder"},"labels":{"app":"wordpress"},"name":"twebstorage-wordpress-0","namespace":"default"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"2Gi"}},"storageClassName":"standard","volumeMode":"Filesystem"}}
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/cinder
+  creationTimestamp: "2019-09-11T12:57:16Z"
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app: wordpress
+  name: twebstorage-wordpress-0
+  namespace: default
+  resourceVersion: "7082"
+  selfLink: /api/v1/namespaces/default/persistentvolumeclaims/twebstorage-wordpress-0
+  uid: ae57b7f7-d493-11e9-b838-2abe99478da2
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: standard
+  volumeMode: Filesystem
+  volumeName: pvc-ae57b7f7-d493-11e9-b838-2abe99478da2
+status:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  phase: Bound

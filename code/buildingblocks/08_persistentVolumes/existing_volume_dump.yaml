@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    kubernetes.io/createdby: cinder-dynamic-provisioner
+    pv.kubernetes.io/bound-by-controller: "yes"
+    pv.kubernetes.io/provisioned-by: kubernetes.io/cinder
+  creationTimestamp: "2019-09-11T12:57:17Z"
+  finalizers:
+  - kubernetes.io/pv-protection
+  labels:
+    failure-domain.beta.kubernetes.io/zone: ix2
+  name: pvc-ae57b7f7-d493-11e9-b838-2abe99478da2
+  resourceVersion: "7079"
+  selfLink: /api/v1/persistentvolumes/pvc-ae57b7f7-d493-11e9-b838-2abe99478da2
+  uid: af0d6fb5-d493-11e9-b838-2abe99478da2
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  cinder:
+    volumeID: 320753ea-b82a-4f3e-8b36-3695c0a675f9
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: twebstorage-wordpress-0
+    namespace: default
+    resourceVersion: "7071"
+    uid: ae57b7f7-d493-11e9-b838-2abe99478da2
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: failure-domain.beta.kubernetes.io/zone
+          operator: In
+          values:
+          - ix2
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: standard
+  volumeMode: Filesystem
+status:
+  phase: Bound
